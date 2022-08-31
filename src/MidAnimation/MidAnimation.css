@@ -1,0 +1,51 @@
+.hej {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.animationDiv {
+
+    color: white;
+
+    @keyframes animationRight {
+        0% {
+            margin-top: 0;
+        }
+
+        100% {
+            margin-top: 100;
+        }
+    }
+
+    animation-name: animationRight;
+    animation-duration: 4s;
+
+}
+
+.sunContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 85%;
+    margin-bottom: 15%;
+    /* border: 1px solid white; */
+}
+
+.sun {
+    height: 150px;
+    width: 150px;
+    position: "absolute";
+    background-color: #ffe600;
+    border-radius: 500px;
+    box-shadow: 0px 0px 10px yellow;
+}
+
+.star {
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px white;
+}
