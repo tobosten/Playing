@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "aos/dist/aos.css"
 import "./MidAnimation.css"
 import styled from 'styled-components'
 import Ufo from "../assets/ufo.png"
+import { ContextWidth } from '../ProjectContext'
+
+
 
 function MidAnimation() {
+
+    const { stateWidth } = useContext(ContextWidth)
 
     return (
         <div className='hej'>
@@ -17,7 +22,8 @@ function MidAnimation() {
             </AnimationContainer>
             <div className='sunContainer'>
                 <HeatAnimation1></HeatAnimation1>
-                <div className='sun'></div>
+                {/* <div className='sun'></div> */}
+                <Sun></Sun>
             </div>
 
             <ShootingStar>
@@ -28,10 +34,20 @@ function MidAnimation() {
 }
 
 
+const Sun = styled.div`
+    height: 150px;
+    width: 150px;
+    position: "absolute";
+    background-color: #ffe600;
+    border-radius: 500px;
+    box-shadow: 0px 0px 10px yellow;
+`;
+
+
 const ShootingStar = styled.div`
     
     position: absolute;
-    margin-left: 95%;
+    margin-left: 90%;
 
     @keyframes shootingStar {
         0% {
@@ -48,7 +64,7 @@ const ShootingStar = styled.div`
         }
 
         100% {
-            margin-left: 0%;
+            margin-left: 5%;
             margin-bottom: -20%;
             opacity: 0;
         }
