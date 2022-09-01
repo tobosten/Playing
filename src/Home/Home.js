@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import "./Home.css"
 import Rain from '../Rain'
 import MidAnimation from '../MidAnimation/MidAnimation'
+import { ContextWidth } from '../ProjectContext'
+import { logDOM } from '@testing-library/react'
 
 function Home() {
+
+    /* console.log(window.innerWidth); */
+    let width = window.innerWidth
+    const { stateWidth, setStateWidth } = useContext(ContextWidth)
+    console.log("Width:", width);
+    setStateWidth(width)
 
     return (
         <div className='mainContainerHome'>

@@ -23,7 +23,6 @@ function MidAnimation() {
             <ShootingStar>
                 <div className='star'></div>
             </ShootingStar>
-
         </div >
     )
 }
@@ -32,17 +31,26 @@ function MidAnimation() {
 const ShootingStar = styled.div`
     
     position: absolute;
-    margin-left: 100%;
+    margin-left: 95%;
 
     @keyframes shootingStar {
         0% {
-          margin-left: 100%;
+          margin-left: 95%;
           margin-bottom: 20%;
+          opacity: 0
+        }
+        25% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 1;
         }
 
         100% {
-        margin-left: -10%;
-        margin-bottom: -20%;
+            margin-left: 0%;
+            margin-bottom: -20%;
+            opacity: 0;
         }
     }
 
@@ -79,19 +87,24 @@ const AnimationContainer = styled.div`
 
     @keyframes goRight {
         0% {
-            margin-left: 0; 
+            margin-left: 0;
+            opacity: 0; 
             transform: rotate(40deg);
         }
         25% { 
             transform: scaleX(1);
+            opacity: 1;
         }
         50% {
-            transform: scaleX(-1) ;
+            margin-left: 50%;
+            margin-top: 0;
+            opacity: 1;
+
         }
-        
         100% {
-            margin-left: 110%;
-            
+            margin-left: 0;
+            margin-top: 15%;
+            opacity: 0;
         }
     }
     animation: goRight 6s infinite;
