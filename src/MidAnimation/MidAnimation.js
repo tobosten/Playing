@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import Aos from "aos"
+import React from 'react'
 import "aos/dist/aos.css"
 import "./MidAnimation.css"
 import styled from 'styled-components'
@@ -12,6 +11,7 @@ function MidAnimation() {
             <AnimationContainer>
                 <img
                     src={Ufo}
+                    alt={""}
                     style={{ height: 250, width: 250 }}
                 />
             </AnimationContainer>

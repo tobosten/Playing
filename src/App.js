@@ -1,16 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './Home/Home';
 
 
 function App() {
   return (
     <div className="App">
-      
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <Home />
+      {/* <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes> */}
     </div>
   );
 }
