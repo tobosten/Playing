@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import "./Home.css"
 import Rain from '../Rain'
 import MidAnimation from '../MidAnimation/MidAnimation'
 import { ContextWidth } from '../ProjectContext'
-import { logDOM } from '@testing-library/react'
 
 function Home() {
 

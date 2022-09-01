@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+/* import { Routes, Route } from 'react-router-dom'; does not work on gh-pages, needs HashRouter*/
 import Home from './Home/Home';
 import ProjectContext from './ProjectContext';
-import React, { useContext } from "react"
+import React from "react"
 
 
 function App() {
