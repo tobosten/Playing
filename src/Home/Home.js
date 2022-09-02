@@ -1,16 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import "./Home.css"
 import Rain from '../Rain'
 import MidAnimation from '../MidAnimation/MidAnimation'
 import { ContextWidth } from '../ProjectContext'
 
+
 function Home() {
 
-    /* console.log(window.innerWidth); */
-    let width = window.innerWidth
-    const { stateWidth, setStateWidth } = useContext(ContextWidth)
-    console.log("Width:", width);
-    setStateWidth(width)
+    const { setStateWidth } = useContext(ContextWidth)
+    window.addEventListener("resize", () => {
+        setStateWidth(window.innerWidth)
+    })
 
     return (
         <div className='mainContainerHome'>

@@ -1,22 +1,18 @@
 import './App.css';
 import styled from 'styled-components';
 import { useState, useContext } from 'react';
-import { useInterval } from 'react-use';
+import { useInterval, useWindowSize } from 'react-use';
 import { ContextWidth } from './ProjectContext';
 
 
 function Rain() {
   const [rainToRender, setRainToRender] = useState([{ offset: 0, key: 0, emoji: '' }]);
-
   const { stateWidth, setStateWidth } = useContext(ContextWidth)
-
-
 
   useInterval(() => {
     if (rainToRender.length > 10) {
       rainToRender.shift();
     }
-
 
 
     const offset = Math.floor(Math.random() * stateWidth);
@@ -29,7 +25,7 @@ function Rain() {
   }, 100);
 
   return (
-    <div className='superRainContainer'>
+    <div>
       {rainToRender.map(({ key, emoji, offset }) => {
         return (
           <EmojiContainer key={key} offset={offset}>

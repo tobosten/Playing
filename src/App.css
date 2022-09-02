@@ -1,2 +1,20 @@
+/* Grid style */
 
 
+.item1 {
+    border: 1px solid green;
+    height: 100px;
+    width: 100px;
+}
+
+.item2 {
+    border: 1px solid green;
+    height: 100px;
+    width: 100px;
+}
+
+.item3 {
+    border: 1px solid green;
+    height: 100px;
+    width: 100px;
+}
