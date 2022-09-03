@@ -33,7 +33,6 @@ function Rain2() {
             })}
         </div>
     );
-
 }
 
 
@@ -79,6 +78,18 @@ function Cloud() {
                 />
 
             </div>
+
+            <div className='animContainer'>
+                <div className='loadingAnimContainer'>
+                    {/*  <div className='dot1'></div> */}
+                    <div className='centerLine'></div>
+                    {/* <div className='dot2'></div> */}
+                </div>
+            </div>
+
+            <div className='animContainer'>
+                
+            </div>
         </div>
     )
 }
@@ -87,10 +98,13 @@ const RainContainer = styled.div`
     @keyframes rainAnim {
         0% {
             margin-top: 0;
+            opacity: 0;
+        }
+        10% {
             opacity: 1;
         }
         50% {
-            opacity: 1;
+            opacity: 0;
         }
         100% {
             margin-top: 30vh;
@@ -101,7 +115,7 @@ const RainContainer = styled.div`
     position: absolute;
     left: ${props => props.offset}px;
     font-size: 40px;
-    margin-left: 20px;
+    margin-left: 70px;
     color: lightgray;
 
     animation: rainAnim 3s ;
