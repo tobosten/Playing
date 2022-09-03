@@ -3,7 +3,7 @@
     flex-direction: row;
     height: 100vh;
     background-color: #2b2b2b;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .cloudImage {
@@ -27,6 +27,7 @@
     margin-left: 200px;
     margin-top: 100px;
 
+    border: 1px solid black;
 }
 
 .sun2 {
@@ -83,7 +84,7 @@
     border-radius: 50px;
     box-shadow: 0px 0px 10px white;
 
-    animation: planetRotation 5s linear infinite;
+    animation: planetRotation 4s linear infinite;
 }
 
 @keyframes planetRotation {
@@ -173,5 +174,115 @@
         z-index: 6;
         margin-bottom: 0;
         margin-right: 0;
+    }
+}
+
+.rotatingPlanet3 {
+    position: absolute;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px white;
+
+    animation: planetRotation3 2s linear infinite;
+}
+
+@keyframes planetRotation3 {
+    0% {
+        margin-top: 0;
+        z-index: 6;
+    }
+
+    25% {
+        margin-top: 350px;
+        z-index: 6;
+
+    }
+
+    26% {
+        z-index: 4;
+    }
+
+    50% {
+        z-index: 4;
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    75% {
+        z-index: 4;
+        margin-bottom: 300px;
+    }
+
+    76% {
+        z-index: 6;
+    }
+
+    100% {
+        z-index: 6;
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}
+
+.kog1 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    margin-left: 100px;
+    transform: rotate(45deg);
+
+    animation: animkog1 3s linear infinite;
+}
+
+@keyframes animkog1 {
+    0% {
+        transform: rotate(-60deg);
+    }
+
+    100% {
+        transform: rotate(-375deg);
+    }
+}
+
+.kog2 {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    margin-left: -50px;
+    transform: rotate(45deg);
+
+    animation: animkog2 3s linear infinite;
+}
+
+@keyframes animkog2 {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.kog3 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    margin-top: -117px;
+    margin-left: 80px;
+
+    animation: animkog3 3s infinite linear;
+}
+
+@keyframes animkog3 {
+    0% {
+        transform: rotate(60deg);
+    }
+
+    100% {
+        transform: rotate(375deg);
     }
 }

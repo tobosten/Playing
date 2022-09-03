@@ -42,9 +42,9 @@ function Cloud() {
     return (
         <div className='superContainer'>
             <div>
-                    <img src={require("../assets/angryCloud.png")}
-                        className="cloudImage"
-                    />
+                <img src={require("../assets/angryCloud.png")}
+                    className="cloudImage"
+                />
 
                 <div className='rainDiv'>
                     <Rain2 />
@@ -62,9 +62,22 @@ function Cloud() {
                 <div className='planet'></div>
                 <div className='rotatingPlanetContainer'>
                     <div className='rotatingPlanet'></div>
-
                     <div className='rotatingPlanet2'></div>
+                    <div className='rotatingPlanet3'></div>
                 </div>
+            </div>
+
+            <div className='animContainer'>
+                <img src={require("../assets/kogImage.png")}
+                    className="kog1"
+                />
+                <img src={require("../assets/kogImage.png")}
+                    className="kog2"
+                />
+                <img src={require("../assets/kogImage.png")}
+                    className="kog3"
+                />
+
             </div>
         </div>
     )
